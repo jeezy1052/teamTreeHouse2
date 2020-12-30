@@ -28,11 +28,8 @@ function showPage(list, page) {
    studentList.insertAdjacentHTML('beforeend', html);
 }
 
-/*
-Create the `addPagination` function
-This function will create and insert/append the elements needed for the pagination buttons
-*/
-// Make the addPadination function
+// Create the addPagination function
+
 function addPagination(list) {
    const pages = Math.ceil(list.length / 9) + 1;
    const linkList = document.querySelector('.link-list');
@@ -80,36 +77,7 @@ function addPagination(list) {
    });
 }
 
-
-// Make search bar for extra credit
-const header = document.querySelector('.header');
-let html = '';
-html = `
-         <label for="search" class="student-search">
-           <input id="search" placeholder="Search by name...">
-           <button type="button"><img src="img/icn-search.svg" alt="Search icon"></button>
-         </label>       
-       `;
-
-header.insertAdjacentHTML('beforeend', html)
-const searchBtn = header.querySelector('button');
-const search = header.querySelector('input');
-
-searchBtn.addEventListener('click', () => {
-   
-   
-});
-
-search.addEventListener('keyup', () => {
-   console.log('Hey Mike Poopie Head')
-});
-
-
-
-showPage(data, 1)
-addPagination(data)
-
-
-
-
 // Call functions
+
+showPage(data, 1);
+addPagination(data);
